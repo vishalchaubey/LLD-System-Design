@@ -46,7 +46,7 @@ public class GameService {
     public void startGame(){
        while(true){
         Player currentPlayer = playersQueue.poll();
-        int roll = dice.roll();
+        int roll = Dice.roll();
         System.out.println("current player: " + currentPlayer.getName() + " rolled a " + roll);
         int newPosition = currentPlayer.getPosition() + roll;
         if (newPosition > board.getBoardSize()) {
